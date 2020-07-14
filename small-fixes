@@ -1,0 +1,31 @@
+1 - To remove the "(base)" in terminal:
+
+after installing Anaconda on Ubuntu this "(base)" may appear on your terminal, this can be related to auto_activate_base, because it is set to True. You can check this using the following:
+
+ 1 - open a terminal
+ 2 - type: conda config --show | grep auto_activate_base
+ 3 - type: conda config --set auto_activate_base False
+ 4 - source ~/.bashrc
+ 
+ if you want to reactivate the "(base)"
+ 
+  1 - open a terminal
+  2 - type: conda config --set auto_activate_base True
+  3 - type: source ~/.bashrc
+
+===================================================================================================
+
+2 - If the "conda list" or "conda init" is not working, try this:
+
+ 1 - open a terminal
+ 2 - type: export PATH=~/anaconda3/bin:$PATH
+ 
+ ===================================================================================================
+ 
+3 - If when trying to run the virtual environment the "CommandNotFoundError" appear, try this:
+
+ 1 - source activate YourVirtualEnvironmentName
+ 
+ 	or
+ 2 - type:source ~/anaconda3/etc/profile.d/conda.sh
+ 3 - conda activate my_env
